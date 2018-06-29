@@ -13,31 +13,6 @@ Event OnPlayerLoadGame()
 	Maintenance()
 EndEvent
 
-;for some reason cant detect spells cast by scripts
-;Event OnSpellCast(Form akSpell)
-;    Debug.Notification("We cast something, but we don't know what it is")
-;endEvent
-
-;for some reason cant detect spells cast by scripts
-;Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked)
-; 
-; 	Debug.Notification("player hit")
-;	if (akSource as spell) == Game.GetFormFromFile(0xFB988, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB994, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB995, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB996, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB997, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB998, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB999, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB99A, "Skyrim.esm") as spell \
-;	|| (akSource as spell) == Game.GetFormFromFile(0xFB99B, "Skyrim.esm") as spell
-;	else
-;		return
-;	endif
-
-;	SpellCheck(ActorRef) 
-;EndEvent
-
 int Function GetCurrentDay()
 	float Time = Utility.GetCurrentGameTime() 	; skyrim days spend in game
 
@@ -57,10 +32,13 @@ Function Maintenance()
 	endif
 EndFunction
 
-Function SpellCheck(Form ActorRef)
+Function SpellCheck(Form ActorRef, Form Shrine)
+	Debug.Notification("shrine " + Shrine.getName())
 	;Debug.Notification("SL_Shrines ALTAR USAGE")
-	if GetCurrentDay() > 0
-		StatChange(self.GetActorRef())
+	if ActorRef == game.GetPlayer()
+		if GetCurrentDay() > 0
+			StatChange(self.GetActorRef())
+		endif
 	endif
 EndFunction
 
@@ -69,9 +47,11 @@ Function StatChange(Actor ActorRef)
     sslActorStats Stats = SexLab.Stats
 	;Debug.Notification("SL_Shrines day >0")
 	if sslActorStats.IsSkilled(ActorRef)
-		if Stats.GetInt(ActorRef, "Lewd") >= JsonUtil.GetIntValue(File, "lewd")
-			Stats.SetInt(ActorRef, "Lewd", Stats.GetInt(ActorRef, "Lewd") - JsonUtil.GetIntValue(File, "lewd"))
+		Debug.Notification("Lewd float" + Stats.GetFloat(ActorRef, "Lewd"))
+		if Stats.GetFloat(ActorRef, "Lewd") >= JsonUtil.GetIntValue(File, "lewd") as float
+			Stats.SetFloat(ActorRef, "Lewd", Stats.GetFloat(ActorRef, "Lewd") - JsonUtil.GetIntValue(File, "lewd") as float)
 		endif
-		Stats.SetInt(ActorRef, "Pure", Stats.GetInt(ActorRef, "Pure") + JsonUtil.GetIntValue(File, "pure"))
+		Stats.SetFloat(ActorRef, "Pure", Stats.GetFloat(ActorRef, "Pure") + JsonUtil.GetIntValue(File, "pure") as float)
+		Debug.Notification("Lewd float" + Stats.GetFloat(ActorRef, "Lewd"))
 	endif
 EndFunction
