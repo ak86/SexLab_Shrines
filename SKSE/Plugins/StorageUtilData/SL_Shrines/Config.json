@@ -1,20 +1,20 @@
 {
 	"formList" : 
 	{
-		"shrine_of_akatosh" : [],
-		"shrine_of_arkay" : [],
-		"shrine_of_auriel" : [],
-		"shrine_of_azura" : [],
-		"shrine_of_boethiah" : [],
-		"shrine_of_dibella" : [],
-		"shrine_of_julianos" : [],
-		"shrine_of_kynareth" : [],
-		"shrine_of_mara" : [],
-		"shrine_of_mephala" : [],
-		"shrine_of_nocturnal" : [],
-		"shrine_of_stendarr" : [],
+		"shrine_of_akatosh" : [ "" ],
+		"shrine_of_arkay" : [ "" ],
+		"shrine_of_auriel" : [ "" ],
+		"shrine_of_azura" : [ "" ],
+		"shrine_of_boethiah" : [ "" ],
+		"shrine_of_dibella" : [ "" ],
+		"shrine_of_julianos" : [ "" ],
+		"shrine_of_kynareth" : [ "" ],
+		"shrine_of_mara" : [ "" ],
+		"shrine_of_mephala" : [ "" ],
+		"shrine_of_nocturnal" : [ "" ],
+		"shrine_of_stendarr" : [ "" ],
 		"shrine_of_talos" : [ "1030554|Skyrim.esm", "1030554|Skyrim.esm" ],
-		"shrine_of_zenithar" : []
+		"shrine_of_zenithar" : [ "" ]
 	},
 	"int" : 
 	{
@@ -40,19 +40,19 @@
 	},
 	"stringList" : 
 	{
-		"shrine_of_akatosh" : [],
-		"shrine_of_arkay" : [],
-		"shrine_of_auriel" : [],
-		"shrine_of_azura" : [],
-		"shrine_of_boethiah" : [],
-		"shrine_of_dibella" : [],
-		"shrine_of_julianos" : [],
-		"shrine_of_kynareth" : [],
-		"shrine_of_mara" : [],
-		"shrine_of_mephala" : [],
-		"shrine_of_nocturnal" : [],
-		"shrine_of_stendarr" : [],
-		"shrine_of_talos" : [ "", "" ],
-		"shrine_of_zenithar" : []
+		"shrine_of_akatosh" : [ "" ],
+		"shrine_of_arkay" : [ "" ],
+		"shrine_of_auriel" : [ "" ],
+		"shrine_of_azura" : [ "" ],
+		"shrine_of_boethiah" : [ "" ],
+		"shrine_of_dibella" : [ "" ],
+		"shrine_of_julianos" : [ "" ],
+		"shrine_of_kynareth" : [ "" ],
+		"shrine_of_mara" : [ "" ],
+		"shrine_of_mephala" : [ "" ],
+		"shrine_of_nocturnal" : [ "" ],
+		"shrine_of_stendarr" : [ "" ],
+		"shrine_of_talos" : [ "" ],
+		"shrine_of_zenithar" : [ "" ]
 	}
 }
