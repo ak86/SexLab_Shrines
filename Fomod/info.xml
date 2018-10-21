@@ -1,5 +1,5 @@
 ﻿<fomod>
-  <Name>SexLab Shrines</Name>
+  <Name>SexLab Shrines(SLA)</Name>
   <Version>1.4</Version>
   <Author>Ed86</Author>
   <Website>https://www.patreon.com/Ed86</Website>
@@ -8,6 +8,7 @@
 Requirements:
 SKSE
 SexLab - Sex Animation Framework
+SexLab - Aroused
 
 Immersive way to reduce character lewdness and raise purity by praying at Shrines of The Nine Divines once per day.
 Not compatible with mods that change TempleBlessingScript, DLC2TempleShrineScript

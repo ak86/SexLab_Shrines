@@ -109,8 +109,8 @@ Function StatChange(Actor ActorRef, Form Shrine)
 		endif
 ;		Debug.Notification("Lewd after " + Stats.GetFloat(ActorRef, "Lewd"))
 
-		;slaFrameWorkScr sla = Quest.GetQuest("sla_Framework") as slaFrameWorkScr
-		;sla.UpdateActorExposure(ActorRef, arousal)
+		slaFrameWorkScr sla = Quest.GetQuest("sla_Framework") as slaFrameWorkScr
+		sla.UpdateActorExposure(ActorRef, arousal)
 		
 		if texttoshow != "" && ActorRef == Game.GetPlayer()
 			Debug.Notification(texttoshow)
