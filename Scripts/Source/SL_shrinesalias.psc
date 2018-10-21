@@ -93,20 +93,24 @@ Function StatChange(Actor ActorRef, Form Shrine)
 		
 		float pure = JsonUtil.IntListGet(File, keyname, 0) as float
 		float lewd = JsonUtil.IntListGet(File, keyname, 1) as float
+		int arousal = JsonUtil.IntListGet(File, keyname, 2)
 		spell spelltocast = JsonUtil.FormListGet(File, keyname, Utility.RandomInt(0, JsonUtil.FormListCount(File, keyname) - 1)) as spell
 		string texttoshow = JsonUtil.StringListGet(File, keyname, Utility.RandomInt(0, JsonUtil.StringListCount(File, keyname) - 1)) as string
 		
-;		Debug.Notification("Pure float before " + keyname + " " + Stats.GetFloat(ActorRef, "Pure") + " adjust " + Pure)
+;		Debug.Notification("Pure before " + keyname + " " + Stats.GetFloat(ActorRef, "Pure") + " adjust " + Pure)
 		if Stats.GetFloat(ActorRef, "Pure") >= -pure
 			Stats.AdjustFloat(ActorRef, "Pure", pure)
 		endif
-;		Debug.Notification("Pure float after " + Stats.GetFloat(ActorRef, "Pure"))
+;		Debug.Notification("Pure after " + Stats.GetFloat(ActorRef, "Pure"))
 
-;		Debug.Notification("Lewd float before " + keyname + " " + Stats.GetFloat(ActorRef, "Lewd") + " adjust " + lewd)
-		if Stats.GetFloat(ActorRef, "Lewd") >= lewd
-			Stats.AdjustFloat(ActorRef, "Lewd", -lewd)
+;		Debug.Notification("Lewd before " + keyname + " " + Stats.GetFloat(ActorRef, "Lewd") + " adjust " + lewd)
+		if Stats.GetFloat(ActorRef, "Lewd") >= -lewd
+			Stats.AdjustFloat(ActorRef, "Lewd", lewd)
 		endif
-;		Debug.Notification("Lewd float after " + Stats.GetFloat(ActorRef, "Lewd"))
+;		Debug.Notification("Lewd after " + Stats.GetFloat(ActorRef, "Lewd"))
+
+		;slaFrameWorkScr sla = Quest.GetQuest("sla_Framework") as slaFrameWorkScr
+		;sla.UpdateActorExposure(ActorRef, arousal)
 		
 		if texttoshow != "" && ActorRef == Game.GetPlayer()
 			Debug.Notification(texttoshow)

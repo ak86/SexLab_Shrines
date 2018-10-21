@@ -16,27 +16,22 @@
 		"shrine_of_talos" : [ "1030554|Skyrim.esm", "1030554|Skyrim.esm" ],
 		"shrine_of_zenithar" : [ "" ]
 	},
-	"int" : 
-	{
-		"lewd" : 10,
-		"pure" : 1
-	},
 	"intList" : 
 	{
-		"shrine_of_akatosh" : [ 1, 10 ],
-		"shrine_of_arkay" : [ 1, 10 ],
-		"shrine_of_auriel" : [ 1, 10 ],
-		"shrine_of_azura" : [ 1, 10 ],
-		"shrine_of_boethiah" : [ 1, 10 ],
-		"shrine_of_dibella" : [ 1, 10 ],
-		"shrine_of_julianos" : [ 1, 10 ],
-		"shrine_of_kynareth" : [ 1, 10 ],
-		"shrine_of_mara" : [ 1, 10 ],
-		"shrine_of_mephala" : [ 1, 10 ],
-		"shrine_of_nocturnal" : [ 1, 10 ],
-		"shrine_of_stendarr" : [ 1, 10 ],
-		"shrine_of_talos" : [ 1, 10 ],
-		"shrine_of_zenithar" : [ 1, 10 ]
+		"shrine_of_akatosh" : [ 1, -10, 0 ],
+		"shrine_of_arkay" : [ 1, -10, 0  ],
+		"shrine_of_auriel" : [ 1, -10, 0  ],
+		"shrine_of_azura" : [ 1, -10, 0  ],
+		"shrine_of_boethiah" : [ 1, -10, 0  ],
+		"shrine_of_dibella" : [ 1, -10, 0  ],
+		"shrine_of_julianos" : [ 1, -10, 0  ],
+		"shrine_of_kynareth" : [ 1, -10, 0  ],
+		"shrine_of_mara" : [ 1, -10, 0  ],
+		"shrine_of_mephala" : [ 1, -10, 0  ],
+		"shrine_of_nocturnal" : [ 1, -10, 0  ],
+		"shrine_of_stendarr" : [ 1, -10, 0  ],
+		"shrine_of_talos" : [ 1, -10, 0  ],
+		"shrine_of_zenithar" : [ 1, -10, 0  ]
 	},
 	"stringList" : 
 	{
