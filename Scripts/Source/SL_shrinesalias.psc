@@ -54,37 +54,37 @@ Function StatChange(Actor ActorRef, Form Shrine)
 		string keyname = ""
 				
 		;Dawnguard DLC1
-		if Shrine == Game.GetFormFromFile(0xC86B, "Dawnguard.esm")
+		if Shrine == Game.GetFormFromFile(0xC86B, "Dawnguard.esm") || StringUtil.Find(Shrine.getname(), "auriel" ) >= 0
 			keyname	= "shrine_of_auriel"
 			
 		;Dragonborn DLC2
-		elseif Shrine == Game.GetFormFromFile(0x3A484, "Dragonborn.esm")
+		elseif Shrine == Game.GetFormFromFile(0x3A484, "Dragonborn.esm") || StringUtil.Find(Shrine.getname(), "azura" ) >= 0
 			keyname	= "shrine_of_azura"
-		elseif Shrine == Game.GetFormFromFile(0x39E34, "Dragonborn.esm")
+		elseif Shrine == Game.GetFormFromFile(0x39E34, "Dragonborn.esm") || StringUtil.Find(Shrine.getname(), "boethiah" ) >= 0
 			keyname	= "shrine_of_boethiah"
-		elseif Shrine == Game.GetFormFromFile(0x3A481, "Dragonborn.esm")
+		elseif Shrine == Game.GetFormFromFile(0x3A481, "Dragonborn.esm") || StringUtil.Find(Shrine.getname(), "mephala" ) >= 0
 			keyname	= "shrine_of_mephala"
 			
 		;Skyrim
-		elseif Shrine == Game.GetFormFromFile(0xD9883, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD9883, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "akatosh" ) >= 0
 			keyname	= "shrine_of_akatosh"
-		elseif Shrine == Game.GetFormFromFile(0x71854, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0x71854, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "arkay" ) >= 0
 			keyname	= "shrine_of_arkay"
-		elseif Shrine == Game.GetFormFromFile(0xD9881, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD9881, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "dibella" ) >= 0
 			keyname	= "shrine_of_dibella"
-		elseif Shrine == Game.GetFormFromFile(0xD9885, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD9885, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "julianos" ) >= 0
 			keyname	= "shrine_of_julianos"
-		elseif Shrine == Game.GetFormFromFile(0xD987F, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD987F, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "kynareth" ) >= 0
 			keyname	= "shrine_of_kynareth"
-		elseif Shrine == Game.GetFormFromFile(0xD9887, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD9887, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "mara" ) >= 0
 			keyname	= "shrine_of_mara"
-		elseif Shrine == Game.GetFormFromFile(0x10E8B0, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0x10E8B0, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "nocturnal" ) >= 0
 			keyname	= "shrine_of_nocturnal"
-		elseif Shrine == Game.GetFormFromFile(0xD987D, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD987D, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "stendarr" ) >= 0
 			keyname	= "shrine_of_stendarr"
-		elseif Shrine == Game.GetFormFromFile(0x100780, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0x100780, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "talos" ) >= 0
 			keyname	= "shrine_of_talos"
-		elseif Shrine == Game.GetFormFromFile(0xD987B, "Skyrim.esm")
+		elseif Shrine == Game.GetFormFromFile(0xD987B, "Skyrim.esm") || StringUtil.Find(Shrine.getname(), "zenithar" ) >= 0
 			keyname	= "shrine_of_zenithar"
 		else
 			Debug.Notification("Not supported shrine " + Shrine.getName())
