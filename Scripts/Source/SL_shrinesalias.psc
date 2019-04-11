@@ -97,30 +97,32 @@ Function StatChange(Actor ActorRef, Form Shrine)
 		spell spelltocast = JsonUtil.FormListGet(File, keyname, Utility.RandomInt(0, JsonUtil.FormListCount(File, keyname) - 1)) as spell
 		string texttoshow = JsonUtil.StringListGet(File, keyname, Utility.RandomInt(0, JsonUtil.StringListCount(File, keyname) - 1)) as string
 		
-;		Debug.Notification("Pure before " + keyname + " " + Stats.GetFloat(ActorRef, "Pure") + " adjust " + Pure)
-		if Stats.GetFloat(ActorRef, "Pure") >= -pure
-			Stats.AdjustFloat(ActorRef, "Pure", pure)
-		endif
-;		Debug.Notification("Pure after " + Stats.GetFloat(ActorRef, "Pure"))
+		;SexLab.Log("Pure before " + keyname + " " + Stats.GetFloat(ActorRef, "Pure"))
+		;SexLab.Log("Pure adjust " + pure)
+		Stats.AdjustFloat(ActorRef, "Pure", pure)
+		;SexLab.Log("Pure after " + Stats.GetFloat(ActorRef, "Pure"))
 
-;		Debug.Notification("Lewd before " + keyname + " " + Stats.GetFloat(ActorRef, "Lewd") + " adjust " + lewd)
-		if Stats.GetFloat(ActorRef, "Lewd") >= -lewd
-			Stats.AdjustFloat(ActorRef, "Lewd", lewd)
+		;SexLab.Log("Lewd before " + keyname + " " + Stats.GetFloat(ActorRef, "Lewd"))
+		if Stats.GetFloat(ActorRef, "Lewd") > -lewd
+			; here could be your advertisement
+		else
+			lewd = -Stats.GetFloat(ActorRef, "Lewd")
 		endif
-;		Debug.Notification("Lewd after " + Stats.GetFloat(ActorRef, "Lewd"))
+		;SexLab.Log("Lewd adjust " + lewd)
+		Stats.AdjustFloat(ActorRef, "Lewd", lewd)
+		;SexLab.Log("Lewd after " + Stats.GetFloat(ActorRef, "Lewd"))
 
-		;slaFrameWorkScr sla = Quest.GetQuest("sla_Framework") as slaFrameWorkScr
-		;sla.UpdateActorExposure(ActorRef, arousal)
+		SL_shrines_SLA.SLS_update_SLA(ActorRef,arousal)
 		
 		if texttoshow != "" && ActorRef == Game.GetPlayer()
 			Debug.Notification(texttoshow)
-;		else
+		else
 ;			Debug.Notification("no text")
 		endif
 		
 		if spelltocast != none
 			spelltocast.cast(ActorRef)
-;		else
+		else
 ;			Debug.Notification("no spell")
 		endif
 		
